@@ -1,6 +1,9 @@
 const express = require('express');
 const hbs = require('hbs');
 
+/* This to grab the port number from the operating system or to set it to 
+3000 in case it is not availabe.*/
+const port = process.env.PORT || 3000;
 // express call
 var app = express();
 // Partial views setup
@@ -39,6 +42,6 @@ app.get('/about', (req, res)=>{
 
 
 
-app.listen(3000, ()=>{
-	console.log("Server is running...");
+app.listen(port, ()=>{
+	console.log(`Server is running on ${port}`);
 });
