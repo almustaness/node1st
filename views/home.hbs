@@ -1,0 +1,12 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>{{pageTitle}}</title>
+</head>
+<body>
+	{{> header}}
+	<!-- this is how to pass an argument to a helper. "welcomeMessage" is a passed argument to "screamIt" helper. This argument is coming from the route. -->
+	<p>{{screamIt welcomeMessage}}</p>
+	<footer>Copy rights {{getFullYear}}</footer>
+</body>
+</html>
